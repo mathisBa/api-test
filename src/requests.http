@@ -3,8 +3,8 @@ POST http://localhost:3102/me-connecter
 Content-Type: application/json
 
 {
-  "username": "test@gmail.com",
-  "password": "admin1234"
+  "nom_utilisateur": "t@gmail.com",
+  "mdp": "admin1234"
 }
 
 ###
@@ -12,23 +12,30 @@ POST http://localhost:3102/api/auth/local/register
 Content-Type: application/json
 
 {
-  "username": "test@gmail.com",
-  "email": "test@gmail.com",
+  "username": "t@gmail.com",
+  "email": "t@gmail.com",
+  "password": "admin1234"
+}
+
+###
+POST http://localhost:1337/api/auth/local
+Content-Type: application/json
+
+{
+  "identifier": "test@gmail.com",
   "password": "admin1234"
 }
 
 ###
 POST http://localhost:1337/api/auth/change-password
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsInVwZGF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsImlhdCI6MTczNzAyMjAyM30.bkBy-EDRFrKxCUWyXLqIwswXNdGNc4tm_vMlgXhcRwk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0QGdtYWlsLmNvbSIsImVtYWlsIjoidEBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJpYXQiOjE3MzcwMzgwODB9.4bW1jagqlDdlUyUhCilHCgaIwo5SIm6DgbGV_eXcWQU
 
 {
   "currentPassword": "admin1234",
   "password": "admin12",
   "passwordConfirmation": "admin12"
 }
-
-
 
 ###
 POST http://localhost:1337/api/auth/logout
@@ -41,15 +48,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hb
 
 ###
 GET http://localhost:3102/miels
-Authorization: `Believe ${token}`
-        
+Authorization: Believe eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0QGdtYWlsLmNvbSIsImVtYWlsIjoidEBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJpYXQiOjE3MzcwMzg1OTd9.05sbitYz4PrgWyrhoB5uBaUcUmZQMpMg0YuF84F4syM
 ###
 GET http://localhost:3102/miels/4
-Authorization: `Believe ${token}`
+Authorization: Believe eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0QGdtYWlsLmNvbSIsImVtYWlsIjoidEBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJpYXQiOjE3MzcwMzg1OTd9.05sbitYz4PrgWyrhoB5uBaUcUmZQMpMg0YuF84F4syM
+
 
 ###
+DELETE http://localhost:3102/miels/5
+Authorization: Believe eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0QGdtYWlsLmNvbSIsImVtYWlsIjoidEBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJpYXQiOjE3MzcwMzg1OTd9.05sbitYz4PrgWyrhoB5uBaUcUmZQMpMg0YuF84F4syM
+Content-Type: 'application/json',
+
+### Not working
 POST http://localhost:3102/miels
-Authorization: `Believe ${token}`
+Authorization: Believe eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0QGdtYWlsLmNvbSIsImVtYWlsIjoidEBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTAxLTE2VDE0OjM0OjM0LjA5OFoiLCJpYXQiOjE3MzcwMzg1OTd9.05sbitYz4PrgWyrhoB5uBaUcUmZQMpMg0YuF84F4syM
 Content-Type: 'application/json',
 
 { 
@@ -58,7 +70,7 @@ Content-Type: 'application/json',
   "prix": 102 
 }
 
-###
+### Not working
 PUT http://localhost:3102/miels/4/prix/10
 Content-Type: 'application/json',
 Authorization: `Believe ${token}`
@@ -68,20 +80,16 @@ Authorization: `Believe ${token}`
   "description": "Description de test à jour" 
 }
 
-###
-DELETE http://localhost:3102/miels/4
-Content-Type: 'application/json',
-Authorization: `Believe ${token}`
 
-###
+### Not working
 GET http://localhost:3102/miels?tags=bio,sapin
 Authorization: `Believe ${token}`
 
-###
+### Not working
 GET http://localhost:3102/miels?tags=bio,lavande,montagne
 Authorization: `Believe ${token}`
 
-###
+### Not working
 POST http://localhost:3102/tags
 Content-Type: 'application/json',
 Authorization: `Believe ${token}`
