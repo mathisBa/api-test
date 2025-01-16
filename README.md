@@ -1,9 +1,8 @@
-# Template d'API CRUD 
+Contenu du fichier ENV 
 
-## Installation
+PORT=3102
+SALT_ROUNDS=10
+JWT_SECRET=wqu4&&n3YoQEaxur$dGd^&&!H^vSz^Vx
 
-1. Clonez le projet
-2. Déplacez vous dans le dossier cloné
-3. installez les dépendances avec la commande `npm install` 
-4. Lancez le projet avec la commande `npm run start`
-5. Modifiez le fichier `src/index.ts` pour commencer à coder
+Les routes ne marchent pas toutes et ne sont pas du tout bien faites, pas d'utilisation du routeur correctement mais j'ai eu tellement de bug que j'ai préféré rendre ça plutôt que blanc
+
