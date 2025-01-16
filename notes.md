@@ -18,3 +18,4 @@
 
 - J'ai perdu beaucoup de temps du le POST pour s'authentifier, ma route n'était d'abord pas reconnue puis je suis tombé dans le piège des champs envoyés qui ont des appélations étranges. 
 - Je n'ai ensuite pas réussi à faire mon CRUD proprement, j'ai dû tout faire dans l'index pour "sauver les meubles" 
+- Les routes d'authentifications fonctionnent toutes bien que la route demandée /se-connecter soit dans l'index. J'ai gardé mon auth routeur qui me permet toutes les authentifications sécurisée avec une gestion des tokens blacklist.
