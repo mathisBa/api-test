@@ -13,3 +13,8 @@
 
 - Les headers d'autorisation devraient être Bearer et pas Believe 
 - Les requêtes devraient respecter la convention. Par exemple, le PUT ne devrait pas être sous la forme /:id/prix/10 mais tous les champs devraient être dans le body avec le nom et la description.
+
+3) Mon retour 
+
+- J'ai perdu beaucoup de temps du le POST pour s'authentifier, ma route n'était d'abord pas reconnue puis je suis tombé dans le piège des champs envoyés qui ont des appélations étranges. 
+- Je n'ai ensuite pas réussi à faire mon CRUD proprement, j'ai dû tout faire dans l'index pour "sauver les meubles" 
