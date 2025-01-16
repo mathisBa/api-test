@@ -1,9 +1,18 @@
 ###
-POST http://localhost:1337/api/auth/local/register
+POST http://localhost:3102/me-connecter
 Content-Type: application/json
 
 {
-  "username": "test",
+  "username": "test@gmail.com",
+  "password": "admin1234"
+}
+
+###
+POST http://localhost:3102/api/auth/local/register
+Content-Type: application/json
+
+{
+  "username": "test@gmail.com",
   "email": "test@gmail.com",
   "password": "admin1234"
 }
@@ -19,14 +28,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hb
   "passwordConfirmation": "admin12"
 }
 
-###
-POST http://localhost:1337/api/auth/local
-Content-Type: application/json
 
-{
-  "identifier": "test@gmail.com",
-  "password": "admin12"
-}
 
 ###
 POST http://localhost:1337/api/auth/logout
@@ -35,3 +37,53 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hb
 ###
 GET http://localhost:1337/api/users/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsInVwZGF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsImlhdCI6MTczNzAyMjAyM30.bkBy-EDRFrKxCUWyXLqIwswXNdGNc4tm_vMlgXhcRwk
+
+
+###
+GET http://localhost:3102/miels
+Authorization: `Believe ${token}`
+        
+###
+GET http://localhost:3102/miels/4
+Authorization: `Believe ${token}`
+
+###
+POST http://localhost:3102/miels
+Authorization: `Believe ${token}`
+Content-Type: 'application/json',
+
+{ 
+  "nom": "Miel de test 2", 
+  "description": "Description de test 2", 
+  "prix": 102 
+}
+
+###
+PUT http://localhost:3102/miels/4/prix/10
+Content-Type: 'application/json',
+Authorization: `Believe ${token}`
+
+{ 
+  "nom": "Miel de test à jour", 
+  "description": "Description de test à jour" 
+}
+
+###
+DELETE http://localhost:3102/miels/4
+Content-Type: 'application/json',
+Authorization: `Believe ${token}`
+
+###
+GET http://localhost:3102/miels?tags=bio,sapin
+Authorization: `Believe ${token}`
+
+###
+GET http://localhost:3102/miels?tags=bio,lavande,montagne
+Authorization: `Believe ${token}`
+
+###
+POST http://localhost:3102/tags
+Content-Type: 'application/json',
+Authorization: `Believe ${token}`
+
+{ "tag": "accacia" }

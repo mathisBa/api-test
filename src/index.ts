@@ -10,7 +10,7 @@ import { TokenBlackListModel } from "./model/TokenBlackList";
 
 import { authRouter } from "./router/auth";
 import { userRouter } from "./router/users";
-
+import { meConnecterRouter } from "./router/meconnecter";
 
 export const sequelize = new Sequelize({
   dialect: 'sqlite',
@@ -30,6 +30,7 @@ app.use(bodyParser.json());
 const apiRouter = express.Router();
 
 apiRouter.use('/auth', authRouter);
+apiRouter.use('/me-connecter', meConnecterRouter);
 apiRouter.use('/users', userRouter);
 
 
