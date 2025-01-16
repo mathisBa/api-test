@@ -3,20 +3,20 @@ POST http://localhost:1337/api/auth/local/register
 Content-Type: application/json
 
 {
-  "username": "tomtom",
-  "email": "thomaslaforge@gmail.com",
+  "username": "test",
+  "email": "test@gmail.com",
   "password": "admin1234"
 }
 
 ###
 POST http://localhost:1337/api/auth/change-password
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0b210b20iLCJlbWFpbCI6InRob21hc2xhZm9yZ2VAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0xMi0wN1QwOTowODo1Mi43NzdaIiwidXBkYXRlZEF0IjoiMjAyMy0xMi0wN1QwOToxMToxNC42MDdaIiwiaWF0IjoxNzAxOTQwMzIxfQ.tuzC-PVTqhF4qFaYOhC4wPxvK48EvNqtV-dh0moZLvI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsInVwZGF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsImlhdCI6MTczNzAyMjAyM30.bkBy-EDRFrKxCUWyXLqIwswXNdGNc4tm_vMlgXhcRwk
 
 {
   "currentPassword": "admin1234",
-  "password": "tomtom1234",
-  "passwordConfirmation": "tomtom1234"
+  "password": "admin12",
+  "passwordConfirmation": "admin12"
 }
 
 ###
@@ -24,8 +24,8 @@ POST http://localhost:1337/api/auth/local
 Content-Type: application/json
 
 {
-  "identifier": "thomaslaforge@gmail.com",
-  "password": "tomtom1234"
+  "identifier": "test@gmail.com",
+  "password": "admin12"
 }
 
 ###
@@ -34,4 +34,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hb
 
 ###
 GET http://localhost:1337/api/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0b210b20iLCJlbWFpbCI6InRob21hc2xhZm9yZ2VAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyNS0wMS0xNlQwOTo1OTowMy44NjdaIiwidXBkYXRlZEF0IjoiMjAyNS0wMS0xNlQwOTo1OTozMi4xMjBaIiwiaWF0IjoxNzM3MDIxNjIyfQ.sd7m3hyWflZiN1XNMCHPflWeseQdG-POMVQufM1OujQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsInVwZGF0ZWRBdCI6IjIwMjUtMDEtMTZUMTA6MDY6MTQuMzcyWiIsImlhdCI6MTczNzAyMjAyM30.bkBy-EDRFrKxCUWyXLqIwswXNdGNc4tm_vMlgXhcRwk
